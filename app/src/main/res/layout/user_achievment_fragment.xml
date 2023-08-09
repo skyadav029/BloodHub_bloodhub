@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="outsideOverlay"
+
+    android:background="@drawable/red_button_bg"
+    tools:context=".fragments.AchievmentsView">
+
+
+
+    <TextView
+        android:id="@+id/ShowInof"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="You are not a donor. Be a donor first to achieve!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/donorAchiev"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Donation Details:"
+            android:textColor="#D32525"
+            android:layout_marginBottom="40dp"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/donateInfo"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="Have you donated today?"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/primary_dark"
+            android:background="@drawable/signin_btn"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/yesnolayout"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_marginBottom="5dp"
+                android:text="Yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/nextDonate"
+            android:gravity="center"
+            android:backgroundTint="@color/primary_dark"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/circle"
+            android:text="34 Days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/signin_btn"
+                    android:backgroundTint="@color/primary_dark"
+                    android:gravity="center"
+                    android:text="Total Donated:"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:padding="3dp"
+                    android:id="@+id/settotalDonate"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/primary_dark"
+                    android:background="@drawable/red_button_bg"
+                    android:text="1 times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="134dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/signin_btn"
+                    android:backgroundTint="@color/primary_dark"
+                    android:gravity="center"
+                    android:text="Last donated:"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:layout_marginBottom="3dp"
+                    android:padding="3dp"
+                    android:id="@+id/setLastDonate"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/primary_dark"
+                    android:background="@drawable/red_button_bg"
+                    android:text="12/12/2018"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
